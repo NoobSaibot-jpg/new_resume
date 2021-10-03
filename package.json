@@ -1,0 +1,91 @@
+{
+  "name": "tets",
+  "description": "![GitHub release](https://img.shields.io/github/release/andreyalexeich/gulp-scss-starter.svg)\r [![dependencies Status](https://david-dm.org/andreyalexeich/gulp-scss-starter/status.svg)](https://david-dm.org/andreyalexeich/gulp-scss-starter)\r [![devDependencies Status](https://david-dm.org/andreyalexeich/gulp-scss-starter/dev-status.svg)](https://david-dm.org/andreyalexeich/gulp-scss-starter?type=dev)\r ![GitHub stars](https://img.shields.io/github/stars/andreyalexeich/gulp-scss-starter.svg?style=social)\r ![GitHub watchers](https://img.shields.io/github/watchers/andreyalexeich/gulp-scss-starter.svg?style=social)\r <a href=\"https://www.paypal.me/andreyalexeich/\">\r <img src=\"https://img.shields.io/badge/%D0%97%D0%B0%D0%B4%D0%BE%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BD%D0%B0%20%D0%BF%D0%B8%D0%B2%D0%BE-PayPal-informational.svg\">\r </a>\r <a href=\"https://www.tinkoff.ru/cardtocard/\">\r <img src=\"https://img.shields.io/badge/%D0%97%D0%B0%D0%B4%D0%BE%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BD%D0%B0%20%D0%BF%D0%B8%D0%B2%D0%BE-%D0%9D%D0%B0%20%D0%BA%D0%B0%D1%80%D1%82%D1%83%20--%205536%209137%205288%201934-informational.svg\">\r </a>",
+  "author": "NoobSaibot",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp prod --production",
+    "build:views": "gulp views --production",
+    "build:styles": "gulp styles --production",
+    "build:scripts": "gulp scripts --production",
+    "build:images": "gulp images --production",
+    "build:webp": "gulp webp --production",
+    "build:sprites": "gulp sprites --production",
+    "build:fonts": "gulp fonts --production",
+    "build:favicons": "gulp favicons --production",
+    "build:gzip": "gulp gzip --production",
+    "lint:styles": "stylelint \"src/**/*.scss\" --syntax=scss",
+    "lint:styles --fix": "stylelint \"src/**/*.scss\" --syntax=scss --fix",
+    "lint:scripts": "eslint --color ./src/blocks",
+    "lint:scripts --fix": "eslint --fix --color ./src/blocks",
+    "bem-c": "bem create $* -l src/blocks/components",
+    "bem-m": "bem create $* -l src/blocks/modules"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/register": "^7.4.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "bem-tools-core": "github:bem-tools/bem-tools-core",
+    "bem-tools-create": "github:bem-tools/bem-tools-create",
+    "browser-sync": "^2.23.6",
+    "del": "^5.1.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-debug": "^4.0.0",
+    "gulp-favicons": "^2.3.1",
+    "gulp-file-include": "^2.0.1",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-watch": "^5.0.0",
+    "gulp-webp": "^4.0.1",
+    "husky": "^4.2.1",
+    "imagemin-giflossy": "^5.1.10",
+    "imagemin-jpeg-recompress": "^7.0.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.0",
+    "imagemin-webp": "^6.0.0",
+    "imagemin-zopfli": "^7.0.0",
+    "lint-staged": "^10.0.3",
+    "require-dir": "^1.2.0",
+    "stylelint": "^13.6.1",
+    "stylelint-order": "^4.1.0",
+    "stylelint-selector-bem-pattern": "^2.1.0",
+    "webpack": "^4.30.0",
+    "webpack-stream": "^5.2.1",
+    "yargs": "^15.4.1"
+  },
+  "dependencies": {
+    "smart-grid": "^2.1.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "!(_*).scss": [
+      "stylelint --fix --color --config ./.stylelintrc"
+    ],
+    "*.js": [
+      "eslint --fix --color"
+    ]
+  },
+  "version": "1.0.0",
+  "main": ".babelrc.js"
+}
