@@ -10,6 +10,7 @@ let theme = document.querySelector('main'),
 const folders = document.querySelectorAll('.folder');
 
 
+
 btnFirst.addEventListener('click', ()=>{
     theme.classList.add('active_first');
     theme.classList.remove('active_second', 'active_trid', 'active_four');

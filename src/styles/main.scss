@@ -5,6 +5,7 @@
 @import "base/fonts";
 @import "base/general";
 @import "../blocks/modules";
+// @import "../styles/animate.scss";
 
 
 *{
@@ -24,16 +25,30 @@ main{
     
     .folder{
         margin-top: 10vh;
-        // transform: translateY(-50%);
         width: 100vh;
-        height: 40vh;
+        height: 50vh;
         text-align: center;
         box-shadow: 2px 2px 10px #000;
         border-radius: 15%;
-        padding-top: 20vh;
+        padding-top: 10vh;
         background-color: rgba(255, 255,255, 0.2) ;
         filter: blur(0.5px);
         transition: 0.1s;
+        font-size: 15px;
+        @media (max-width: 1025px) {
+            font-size: 13px;
+        }
+        @media (max-width: 426px) {
+            padding-top: 1vh;
+            font-size: 10px;
+            width: 50vh;
+        }
+        @media (max-width: 321px){
+            width: 40vh;
+            padding-top: 0;
+            font-size: 9px;
+        }
+
         h1, h2{
             filter: blur(0px);
             transform: rotateY(-180deg);
@@ -60,18 +75,28 @@ main{
         color: aliceblue;
         list-style: none;
         font-size: 30px;
-        background-color: rgba(255, 255,255, 0.2) ;
-        filter: blur(0.5px);
         .nav__item{
             cursor: pointer;
             transition: 0.5s ease;
             &:hover{
-                box-shadow: 2px 2px 5px red;
+                text-shadow: green 5px 5px 10px;
+                transform: skew(-15deg);
+            }
+            &__active{
+                text-shadow: yellowgreen 5px 5px 10px;
+                transform: skew(-15deg); 
+            }
+            @media (max-width: 1025px) {
+                font-size: 25px;
+            }
+            @media (max-width: 426px) {
+                font-size: 15px;
             }
         }
     }
     
 }
+
 
 .active_first{
     background-position: left;
