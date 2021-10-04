@@ -62,6 +62,7 @@ main{
             h1, h2, p, img, span, form{
                 filter: blur(0px);
                 transform: rotateY(-180deg);
+                animation: animationInFilder 2s linear;
             }
         }
 
@@ -118,11 +119,19 @@ main{
 @keyframes animationFolder{
     0%{
         transform: rotateY(0deg);
-        opacity: 0;
     }
     50%{
         transform: rotateY(180deg);
         // opacity: 1;
     }
         
+}
+
+@keyframes animationInFilder {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
