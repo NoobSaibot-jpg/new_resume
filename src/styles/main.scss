@@ -5,12 +5,10 @@
 @import "base/fonts";
 @import "base/general";
 @import "../blocks/modules";
+@import "font-awesom/fontawesome.scss";
 // @import "../styles/animate.scss";
 
 
-*{
-    z-index: 10;
-}
 
 main{
     display: flex;
